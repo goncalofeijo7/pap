@@ -1,0 +1,29 @@
+{
+  "name": "projetofinal.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goncalofeijo7/pap.git"
+  },
+  "author": "goncalofeijo7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goncalofeijo7/pap/issues"
+  },
+  "homepage": "https://github.com/goncalofeijo7/pap#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "pkg": "^5.4.1"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  },
+  "description": ""
+}
