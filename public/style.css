@@ -14,8 +14,8 @@
     text-align: center;
 }
 body{
-    background-image: url("/Imagens/unsplash (1).jpg");
-    position: fixed;
+    background-image: url("/Imagens/unsplash\ \(1\).png");
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -27,13 +27,18 @@ body{
     background-color: #1d4638;
 }
 
+.container-fluid{
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
 .container-fluid2{
     position: relative;
     top: 150px;
 }
 
 .nav-item {
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 
