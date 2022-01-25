@@ -1,16 +1,17 @@
-body{
-  background-image: none !important;
-  background-color: #fff !important;
-  box-shadow: none !important;
-}
-.bg{
-  background-color: white!important;
+body {
+    background-image: none !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
 }
 
-.history{
-  color: black;
-  text-align: center;
-  margin-top:50px;
-  margin-left: 50px;
-  margin-right: 50px;
+.bg {
+    background-color: white!important;
+}
+
+.history {
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
