@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,192 +8,85 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/Alojamento/alojamneto.css">
+    <script src="/scripts/scripts.js"></script>
     <title>Alojamento</title>
 
 </head>
-<body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark my_bg-nav">
-        <div class="container-fluid">
-            <div class="d-flex flex-grow-1">
-                <span class="w-100 d-lg-none d-block">
-                    <!-- hidden spacer to center brand on mobile -->
-                </span>
-                <a class="navbar-brand d-none d-lg-inline-block" href="index.html"> Visita São Miguel </a>
-                <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/index.html">
-                    <img src="Imagens/favicon-16x16.png" width="45px">
-                </a>
-                <div class="w-100 text-right">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-                <ul class="navbar-nav ms-auto flex-nowrap">
+<body onload="initForm()">
+    <div id="nbar"></div>
 
-                    <li class="nav-item">
-                        <a href="/index.html" class="nav-link m-2 menu-item">Início</a>
-                    </li>
-                    <li class="nav-item dropdown" style="margin-top: 7px;">
-                        <a href="/Visita_Explora/visit_explor.html" class="nav-link dropdown-toggle"
-                            data-bs-toggle="dropdown">Visita/Explora</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <ul>
-                                <li><a class="dropdown-item" href="#">Centros de Interpretação</a></li>
-                                <li><a class="dropdown-item" href="#">Museus e Centros Culturais</a></li>
-                                <li><a class="dropdown-item" href="#">Jardins e Parques</a></li>
-                                <li><a class="dropdown-item" href="#">Zonas Balneares</a></li>
-                                <li><a class="dropdown-item" href="#">Reservas Naturais</a></li>
-                                <li><a class="dropdown-item" href="#">Monumentos Narutais</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown" style="margin-top: 7px;">
-                        <a href="/Experiencia_Atividades/experiencia_atividades.html" class="nav-link dropdown-toggle"
-                            data-bs-toggle="dropdown">Experiências/Atividades</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <ul>
-                                <li><a class="dropdown-item" href="/Experiencia_Atividades/experiencia_atividades.html">Terra</a></li>
-                                <li><a class="dropdown-item" href="/Experiencia_Atividades/expriencia_mar.html">Mar</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/Experiencia_Atividades/expriencia_ar.html">Ar</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown" style="margin-top: 7px;">
-                        <a href="/Alojamento/alojamento.html" class="nav-link dropdown-toggle"
-                            data-bs-toggle="dropdown">Alojamento</a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <ul>
-                                <li><a class="dropdown-item" href="/Alojamento/ponta_delgada.html">Ponta Delgada</a></li>
-                                <li><a class="dropdown-item" href="/Alojamento/lagoa.html">Lagoa</a></li>
-                                <li><a class="dropdown-item" href="/Alojamento/nordeste.html">Nordeste</a></li>
-                                <li><a class="dropdown-item" href="/Alojamento/vila_povoacao.html">Vila da Povoação</a></li>
-                                <li><a class="dropdown-item" href="/Alojamento/ribeira_grande.html">Ribeira Grande</a></li>
-                                <li><a class="dropdown-item" href="/Alojamento/vila_franca.html">Vila Franca do Campo</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown" style="margin-top: 5px;">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><img
-                                src="/Imagens/Profile-PNG-Clipart.png" width="30px"></a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <ul>
-                                <li><a class="dropdown-item" href="/Conta/login.html">Iniciar Sessão</a></li>
-                                <li><a class="dropdown-item" href="/Conta/cadastro.html">Registar-se</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+
+    <!--Ponta Delgada-->
+    <h1 style="text-align:center">Ponta Delgada</h1>
+    <section class="container">
+        <div class="card">
+            <div class="card-image img1"></div>
+            <h2>VIP Executive Azores Hotel</h2>
+            <p>O VIP Executive Azores alberga um restaurante com vistas panorâmicas para o mar. O hotel está situado a menos de 1 km da Marina de Ponta Delgada.</p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button>Reserve já!</button></a></div>
         </div>
+        <div class="card">
+            <div class="card-image img2"></div>
+            <h2>Thomas Place</h2>
+            <p>O Thomas Place proporciona alojamento em Ponta Delgada. Todos os quartos têm uma televisão de ecrã plano com canais por satélite. Algumas unidades oferecem vista mar ou para o jardim. </p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/thomas.html"><button>Reserve já!</button></a> </div>
+        </div>
+        <div class="card">
+            <div class="card-image img3"></div>
+            <h2>Atlantic Home Azores</h2>
+            <p>Com vistas para o mar, para a cidade e para a montanha, o Atlantic Home Azores está localizado no coração de Ponta Delgada e a poucos passos da Marina.</p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/atlantic.html"><button>Reserve já!</button></a></div>
+        </div>
+    </section>
+    <!--Lagoa-->
+    <h1 style="text-align:center">Lagoa</h1>
+    <section class="container">
+        <div class="card">
+            <div class="card-image img4"></div>
+            <h2>Casas do Termo</h2>
+            <p>Situadas em Lagoa, a 13 km de Ponta Delgada, as Casas do Termo dispõem de um jardim e de acesso Wi-Fi gratuito.</p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Lagoa/termo.html"><button>Reserve já!</button></a></div>
+        </div>
+        <div class="card">
+            <div class="card-image img5"></div>
+            <h3>Quinta de Santa Bárbara Casas Turisticas</h3>
+            <p>A Quinta de Santa Bárbara Casas Turísticas dispõe de uma piscina exterior e de um spa e centro de bem-estar. Está localizada a 2 km do centro de Lagoa e a 12 km do centro de Ponta Delgada.</p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Lagoa/quinta.html"><button>Reserve já!</button></a> </div>
+        </div>
+        <div class="card">
+            <div class="card-image img6"></div>
+            <h2> epicenter SKYBAR</h2>
+            <p>Situado em Lagoa, o epicenter SKYBAR dispõe de uma varanda e de vistas para o jardim. A propriedade fica a 9 km de Ponta Delgada e dispõe de estacionamento privado gratuito.</p>
+            <div class="d-flex justify-content-center">
+                <a target="_blank" href="/Alojamento/Hoteis/Lagoa/skybar.html"><button>Reserve já!</button></a></div>
+        </div>
+    </section>
+
+
+    <!--Pagination-->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <!--<a class="page-link">Previous</a>-->
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="alojamento_pag2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="alojamento_pag3.html">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="alojamento_pag2.html">Próximo</a>
+            </li>
+        </ul>
     </nav>
 
-       
- <!--Alojamnetos-->
 
+    <div id="foot"></div>
+</body>
 
-<!--Ponta Delgada-->
-<h1 style="text-align:center">Ponta Delgada</h1>
- <section class="container">
-    <div class="card">
-      <div class="card-image img1"></div>
-      <h2>VIP Executive Azores Hotel</h2>
-      <p>O VIP Executive Azores alberga um restaurante com vistas panorâmicas para o mar. O hotel está situado a menos de 1 km da Marina de Ponta Delgada.</p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button>Reserve já!</button></a></div>
-    </div>
-    <div class="card">
-      <div class="card-image img2"></div>
-      <h2>Thomas Place</h2>
-      <p>O Thomas Place proporciona alojamento em Ponta Delgada.
-        Todos os quartos têm uma televisão de ecrã plano com canais por satélite. Algumas unidades oferecem vista mar ou para o jardim. </p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/thomas.html"><button>Reserve já!</button></a> </div>
-    </div>
-    <div class="card">
-      <div class="card-image img3"></div>
-      <h2>Atlantic Home Azores</h2>
-      <p>Com vistas para o mar, para a cidade e para a montanha, o Atlantic Home Azores está localizado no coração de Ponta Delgada e a poucos passos da Marina.</p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/atlantic.html"><button>Reserve já!</button></a></div>
-    </div>
-  </section>
-  <!--Lagoa-->
-  <h1 style="text-align:center">Lagoa</h1>
-  <section class="container">
-    <div class="card">
-      <div class="card-image img4"></div>
-      <h2>Casas do Termo</h2>
-      <p>Situadas em Lagoa, a 13 km de Ponta Delgada, as Casas do Termo dispõem de um jardim e de acesso Wi-Fi gratuito.</p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Lagoa/termo.html"><button>Reserve já!</button></a></div>
-    </div>
-    <div class="card">
-      <div class="card-image img5"></div>
-      <h3>Quinta de Santa Bárbara Casas Turisticas</h3>
-      <p>A Quinta de Santa Bárbara Casas Turísticas dispõe de uma piscina exterior e de um spa e centro de bem-estar. Está localizada a 2 km do centro de Lagoa e a 12 km do centro de Ponta Delgada.</p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Lagoa/quinta.html"><button>Reserve já!</button></a> </div>
-    </div>
-    <div class="card">
-      <div class="card-image img6"></div>
-      <h2> epicenter SKYBAR</h2>
-      <p>Situado em Lagoa, o epicenter SKYBAR dispõe de uma varanda e de vistas para o jardim. A propriedade fica a 9 km de Ponta Delgada e dispõe de estacionamento privado gratuito.</p>
-      <div class="d-flex justify-content-center">
-      <a target="_blank" href="/Alojamento/Hoteis/Lagoa/skybar.html"><button>Reserve já!</button></a></div>
-    </div>
-  </section>
-
-
- <!--Pagination-->
-  <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <!--<a class="page-link">Previous</a>-->
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="alojamento_pag2.html">2</a></li>
-      <li class="page-item"><a class="page-link" href="alojamento_pag3.html">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="alojamento_pag2.html">Próximo</a>
-      </li>
-    </ul>
-  </nav>
-        
-
-
-     <!--rodape-->       
-     <div class="footer-dark">
-        <footer >
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Serviços</h3>
-                        <ul>
-                            <li><a href="/index.html">Início</a></li>
-                            <li><a href="/Visita_Explora/visit_explor.html">Visita/Explora</a></li>
-                            <li><a href="/Experiencia_Atividades/experiencia_atividades.html">Experiências/Atividades</a></li>
-                            <li><a href="/Alojamento/alojamento.html">Alojamento</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Sobre</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Visita São Miguel</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-                    </div>
-                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">Visita São Miguel © 2021</p>
-            </div>
-          </footer>
+</html>
