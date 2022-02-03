@@ -1,109 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-body{
-    background-image: url("/Imagens/rui-silvestre-0m-egh5Gcl0-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
-.container{
-    display:flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 100px;
-}
 
-.card {
-    background-color: #ffffff80;
-    padding: 30px;
-    border-radius: 4%;
-    box-shadow: 3px 3px 1px 0px #ffffff60;
-    width: 400px;
-}
-
-h1{
+.h3 {
     text-align: center;
-    margin-bottom: 20px;
-    color: rgba(165, 165, 118, 0.527)
 }
 
-.label-float input{
-    width: 100%;
-    padding: 5px 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 2px solid rgba(165, 165, 118, 0.527);
-    background-color: transparent;
-    outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 0;
+body {
+
+    box-shadow: 0 0 400px rgba(0, 0, 0, 0.9) inset;
 }
 
-.label-float {
+.my_bg-nav {
+    background-color: #1d4638;
+}
+
+.container-fluid {
+    margin-left: 25px;
+    margin-right: 15px;
+}
+
+.container-fluid2 {
     position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    top: 150px;
 }
 
-.label-float input:focus{
-    border-bottom: 2px solid #307a8c;
+.nav-item {
+    padding-left: 25px;
 }
 
-.label-float label{
-    color: #307a8c;
-    pointer-events: none;
-    position: absolute;
-    top:0;
-    left: 0;
-    margin-top: 13px;
-    transition: all .3s ease-out;
+
+/* saiba mais*/
+
+
+
+
+/*rodape*/
+
+.footer-dark {
+    width: 100%;
+    padding: 15px;
+    color: #f0f9ff;
+    background-color: #1d4638;
+    position: flex;
+    bottom: 0;
 }
 
-.label-float input:focus + label,
-.label-float input:valid + label{
-    font-size: 13px;
+.footer-dark h3 {
     margin-top: 0;
-    color: #307a8c
-}
-
-button{
-    background-color: transparent;
-    border-color: rgba(165, 165, 118, 0.527);
-    color: #307a8c;
-    padding: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
-    font-size: 12pt;
-    margin-top: 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
+    font-size: 16px;
 }
 
-
-button:hover {
-   background-color: rgba(165, 165, 118, 0.527);
-   color: #fff;
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
-.justify-center{
-    display: flex;
-    justify-content: center;
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
 }
 
-.fa-eye{
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    cursor: pointer;
-    color:#307a8c;
+.footer-dark ul a:hover {
+    opacity: 0.8;
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 0px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
 }
