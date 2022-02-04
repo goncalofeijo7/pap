@@ -49,18 +49,6 @@
   background-image: url("/Imagens/7eaa0e06fcc0e014ef76e94832b47038.jpg")
 }
 
-.img4 {
-  background-image: url("/Imagens/ISM6481.jpg")
-}
-
-.img5 {
-  background-image: url("/Imagens/univ._acores.jpg")
-}
-
-.img6 {
-  background-image: url("/Imagens/slideshow01.jpg")
-}
-
 .card h2 {
   text-align: center;
   padding: 10px;
@@ -90,7 +78,7 @@
     padding: 15px;
     color:#f0f9ff;
     background-color:#1d4638;
-    position: flex;
+    position: fixed;
     bottom: 0;
   }
   
