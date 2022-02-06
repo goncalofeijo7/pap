@@ -62,6 +62,7 @@
   background-image: url("/Imagens/slideshow01.jpg")
 }
 
+/*Jardins e Parques*/
 .img7 {
   background-image: url("/Imagens/photo0jpg.jpg")
 }
@@ -72,6 +73,19 @@
 
 .img9 {
   background-image: url("/Imagens/Terra Nostra 1   43.jpg")
+}
+
+/*Zonas Balneares*/
+.img10 {
+  background-image: url("/Imagens/Ribeira Quente_660x371.jpg")
+}
+
+.img11 {
+  background-image: url("/Imagens/zona_balnear_pocas_sul_mosteiros.jpg")
+}
+
+.img12 {
+  background-image: url("/Imagens/agua_dalto_beach.jpg")
 }
 
 .card h2 {
