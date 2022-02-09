@@ -49,8 +49,10 @@ body {
 }
 
 .btn-saibamais:hover {
-    color: #fff;
+    color: rgb(250, 250, 250);
+    background-color: #0a2e1b;
 }
+
 
 
 /*rodape*/
