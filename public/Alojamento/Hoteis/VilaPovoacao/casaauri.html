@@ -11,93 +11,13 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="/Alojamento/Hoteis/VilaPovoacao/casaauri.css">
+  <script src="/scripts/scripts.js"></script>
   <title>Alojamento</title>
 
 </head>
 
-<body>
-
-
-  <nav class="navbar navbar-expand-lg navbar-dark my_bg-nav">
-    <div class="container-fluid">
-      <div class="d-flex flex-grow-1">
-        <span class="w-100 d-lg-none d-block">
-          <!-- hidden spacer to center brand on mobile -->
-        </span>
-        <a class="navbar-brand d-none d-lg-inline-block" href="/index.html"> Visita São Miguel </a>
-        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/index.html">
-          <img src="Imagens/favicon-16x16.png" width="45px">
-        </a>
-        <div class="w-100 text-right">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-      <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-        <ul class="navbar-nav ms-auto flex-nowrap">
-
-          <li class="nav-item">
-            <a href="/index.html" class="nav-link m-2 menu-item">Início</a>
-          </li>
-          <li class="nav-item dropdown" style="margin-top: 7px;">
-            <a href="/Visita_Explora/visit_explor.html" class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown">Visita/Explora</a>
-            <div class="dropdown-menu dropdown-menu-end">
-              <ul>
-                <li><a class="dropdown-item" href="/Alojamento/ponta_delgada.html">Ponta Delgada</a></li>
-                <li><a class="dropdown-item" href="/Alojamento/lagoa.html">Lagoa</a></li>
-                <li><a class="dropdown-item" href="/Alojamento/nordeste.html">Nordeste</a></li>
-                <li><a class="dropdown-item" href="/Alojamento/vila_povoacao.html">Vila da Povoação</a></li>
-                <li><a class="dropdown-item" href="/Alojamento/ribeira_grande.html">Ribeira Grande</a></li>
-                <li><a class="dropdown-item" href="/Alojamento/vila_franca.html">Vila Franca do Campo</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item dropdown" style="margin-top: 7px;">
-            <a href="/Experiencia_Atividades/experiencia_atividades.html" class="nav-link dropdown-toggle"
-              data-bs-toggle="dropdown">Experiências/Atividades</a>
-            <div class="dropdown-menu dropdown-menu-end">
-              <ul>
-                <li><a class="dropdown-item" href="#">Terra</a></li>
-                <li><a class="dropdown-item" href="#"></a>Trilhos</li>
-                <li><a class="dropdown-item" href="#"></a>Passeios de bicicleta</li>
-                <li><a class="dropdown-item" href="#"></a>Passeios a cavalo</li>
-                <li><a class="dropdown-item" href="#"></a>Golfe</li>
-                <li><a class="dropdown-item" href="#"></a>Observação de aves</li>
-                <li><a class="dropdown-item" href="#"></a>Canyoning</li>
-
-                <li><a class="dropdown-item" href="#">Mar</a>
-                <li><a class="dropdown-item" href="#">Observação de cetáceos</a></li>
-                <li><a class="dropdown-item" href="#">Mergulho</a></li>
-                <li><a class="dropdown-item" href="#">Surf</a></li>
-                <li><a class="dropdown-item" href="#">Canoagem</a></li>
-                <li><a class="dropdown-item" href="#">Wakeboard</a></li>
-                <li><a class="dropdown-item" href="#">Observação de cetáceos</a></li>
-          </li>
-          <li><a class="dropdown-item" href="#">Ar</a>
-          <li><a class="dropdown-item" href="#">Patapente</a></li>
-          </li>
-        </ul>
-      </div>
-      </li>
-      <li class="nav-item dropdown" style="margin-top: 7px;">
-        <a href="/Alojamento/alojamento.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Alojamento</a>
-        <div class="dropdown-menu dropdown-menu-end">
-          <ul>
-            <li><a class="dropdown-item" href="/Alojamento/ponta_delgada.html">Ponta Delgada</a></li>
-            <li><a class="dropdown-item" href="/Alojamento/lagoa.html">Lagoa</a></li>
-            <li><a class="dropdown-item" href="/Alojamento/nordeste.html">Nordeste</a></li>
-            <li><a class="dropdown-item" href="/Alojamento/vila_povoacao.html">Vila da Povoação</a></li>
-            <li><a class="dropdown-item" href="/Alojamento/ribeira_grande.html">Ribeira Grande</a></li>
-            <li><a class="dropdown-item" href="/Alojamento/vila_franca.html">Vila Franca do Campo</a></li>
-          </ul>
-        </div>
-      </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
+<body onload="initForm()">
+  <div id="nbar"></div>
 
   <!--Imagens-->
   <p>
@@ -131,7 +51,6 @@
       </div>
     </div>
     </div>
-  </section>
 
     <p></p>
 
@@ -142,41 +61,17 @@
       <p>Os hóspedes podem participar em várias actividades, tais como trekking e pesca. As Furnas ficam a 21 km da propriedade.</p>
     </div>
 
+        <!--Booking-->
+        <div class="container">
+          <h1>Reserva já!</h1>
+          <a href="https://www.booking.com/hotel/pt/casa-auri.pt-pt.html?label=gog235jc-1DCAsouwFCEGVwaWNlbnRlci1za3liYXJIH1gDaLsBiAEBmAEfuAEXyAEV2AED6AEB-AECiAIBqAIDuAK3n5SQBsACAdICJDQ2YTJlOTJlLWY5YjktNGUwMC05NjRhLWE3ODg2MjFhYzgzONgCBOACAQ&sid=4117b8549c2949437417f6bd33739ff8&aid=356980&ucfs=1&arphpl=1&dest_id=1938592&dest_type=hotel&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=64046d8bb91b006e&srepoch=1644507287&from=searchresults#hotelTmpl" target="_blank">Casa Auri</a>
 
+          <p>
+          </p>
 
+  </section>
 
-
-    <!--rodape-->
-  <div class="footer-dark">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 item">
-            <h3>Serviços</h3>
-            <ul>
-              <li><a href="/index.html">Início</a></li>
-              <li><a href="/Visita_Explora/visit_explor.html">Visita/Explora</a></li>
-              <li><a href="/Experiencia_Atividades/experiencia_atividades.html">Experiências/Atividades</a></li>
-              <li><a href="/Alojamento/alojamento.html">Alojamento</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-6 col-md-3 item">
-            <h3>Sobre</h3>
-            <ul>
-              <li><a href="#">Company</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div class="col-md-6 item text">
-            <h3>Visita São Miguel</h3>
-            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
-              elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-          </div>
-        </div>
-        <p class="copyright">Visita São Miguel © 2021</p>
-      </div>
-    </footer>
-  </div>
+    <div id="foot"></div>
 </body>
+
 </html>
