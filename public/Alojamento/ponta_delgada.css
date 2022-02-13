@@ -1,3 +1,14 @@
+/*body{
+  height: 100%;
+}
+
+.imagem{
+  background-image: url("/Imagens/kevin-et-laurianne-langlais-9XchRGDjhhQ-unsplash.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}*/
+
 .my_bg-nav{
     background-color: #1d4638;
 }

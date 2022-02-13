@@ -1,9 +1,10 @@
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
-}
+/*.imagem{
+  background-image: url("/Imagens/kevin-et-laurianne-langlais-9XchRGDjhhQ-unsplash.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}*/
 
 .my_bg{
     background-color: transparent !important;
@@ -21,6 +22,10 @@
 .nav-item {
   padding-left: 15px;
 
+}
+
+h1{
+  color: rgb(0, 0, 0);
 }
 
 .container{
@@ -63,14 +68,14 @@
 
 
 .button {
-    background-color: #4CAF50;
+  background-color: #1d4638; 
     transition-duration: 0.4s;
     align: center;
     
   }
   
 .card button:hover {
-    background-color: #4CAF50; 
+    background-color: #1d4638; 
     color: white;
     align: center;
   }

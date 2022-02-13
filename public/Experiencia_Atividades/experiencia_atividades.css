@@ -1,3 +1,14 @@
+body{
+    height: 100%;
+  }
+  
+  .imagem{
+    background-image: url("/Imagens/rui-amaro-yLm9YUWnX7Y-unsplash.png");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+  }
+
 .my_bg-nav {
     background-color: #1d4638;
 }
