@@ -44,11 +44,12 @@ h1{
 }
 
 .card-image{
-  background-color: turquoise;
+  background-color: transparent !important;
   height: 170px;
   margin-bottom: 15px;
   background-size: cover;
   border-radius: 15px 15px 0 0;
+  border-color: transparent  !important;
 }
 
 .img1{
@@ -85,6 +86,7 @@ h1{
   color: white;
   align: center;
 }
+
 /*Lagoa*/
 .container{
   display: flex;
@@ -143,6 +145,7 @@ h1{
   color: white;
   align: center;
 }
+
 /*Nordeste*/
 .container{
   display: flex;
