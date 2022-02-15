@@ -40,18 +40,20 @@ function insertCardInfo(data) {
     const cardInfo = document.getElementById('cardInfos')
     cardInfo.innerHTML = ''
     try {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < data.length; i++) {
             let cardImage = data[i].cardImage
             let cardTitle = data[i].cardTitle
             let cardDescription = data[i].cardDescription
-            cardInfo.innerHTML += `<div class="card">
-                                        <img class="card-img-top" src=${cardImage} style="width:auto; height: 180px; object-fit: cover;">
-                                        <h2>${cardTitle}</h2>
-                                        <p>${cardDescription}</p>
-                                        <div class="d-flex justify-content-center">
-                                            <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button>Reserve já!</button></a></div>
-                                    </div>`
-
+            cardInfo.innerHTML +=
+                `<div class="col-sm">
+                    <div class="card">
+                        <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover;">
+                        <h2>${cardTitle}</h2>
+                        <p>${cardDescription}</p>
+                        <div class="d-flex justify-content-center">
+                            <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button>Reserve já!</button></a></div>
+                        </div>
+                </div>`
         }
     } catch (e) {
 
