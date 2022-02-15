@@ -1,7 +1,6 @@
 function initForm() {
     getNavbar();
     getFooter();
-    insertCards()
 }
 
 function getNavbar() {
@@ -11,7 +10,7 @@ function getNavbar() {
         .then((html) => {
             nbar.innerHTML += html
         })
-        .catch(function (err) {
+        .catch(function(err) {
             alert('Ocorreu um problema...')
         })
 }
@@ -23,7 +22,7 @@ function getFooter() {
         .then((html) => {
             foot.innerHTML += html
         })
-        .catch(function (err) {
+        .catch(function(err) {
             alert('Ocorreu um problema...')
         })
 }
@@ -32,10 +31,11 @@ function insertCards() {
     fetch('http://localhost:3000/cInfo')
         .then(res => res.json())
         .then(data => insertCardInfo(data))
-        .catch(function (err) {
+        .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
 }
+
 function insertCardInfo(data) {
     const cardInfo = document.getElementById('cardInfos')
     cardInfo.innerHTML = ''
@@ -57,5 +57,3 @@ function insertCardInfo(data) {
 
     }
 }
-
-
