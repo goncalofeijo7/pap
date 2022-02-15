@@ -43,18 +43,6 @@
     border-radius: 15px 15px 0 0;
 }
 
-.img1{
-    background-image: url("/Imagens/vip.jpg")
-}
-
-.img2{
-    background-image: url("/Imagens/thomas.jpg")
-}
-
-.img3{
-    background-image: url("/Imagens/atlantic.jpg")
-}
-
 .card h2{
   text-align: center;
   padding: 10px;

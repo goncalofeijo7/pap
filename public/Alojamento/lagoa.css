@@ -44,18 +44,6 @@ h1{
   border-radius: 15px 15px 0 0;
 }
 
-.img4{
-  background-image: url("/Imagens/termo.jpg")
-}
-
-.img5{
-  background-image: url("/Imagens/quinta.jpg")
-}
-
-.img6{
-  background-image: url("/Imagens/skybar.jpg")
-}
-
 .card h2{
   text-align: center;
   padding: 10px;

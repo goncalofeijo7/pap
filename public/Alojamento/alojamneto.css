@@ -36,7 +36,7 @@ h1{
 }
 
 .card{
-  background: rgb(201, 25, 25);
+  background: rgb(255, 1, 170);
   width: 270px;
   height: 500px;
   margin: 10px;
@@ -52,18 +52,6 @@ h1{
   border-color: transparent  !important;
 }
 
-.img1{
-  background-image: url("/Imagens/vip.jpg")
-}
-
-.img2{
-  background-image: url("/Imagens/thomas.jpg")
-}
-
-.img3{
-  background-image: url("/Imagens/atlantic.jpg")
-}
-
 .card h2{
   text-align: center;
   padding: 10px;
@@ -73,11 +61,13 @@ h1{
   padding: 10px;
 }
 
-
 .button {
   background-color: #1d4638;
   transition-duration: 0.4s;
+  margin: 0 auto;
   align: center;
+  justify-content-center: 
+  align-content-center;
   
 }
 
@@ -85,284 +75,9 @@ h1{
   background-color: #1d4638; 
   color: white;
   align: center;
+  margin: 0 auto;
+  text-align: center;
 }
-
-/*Lagoa*/
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background: white;
-  width: 270px;
-  height: 500px;
-  margin: 10px;
-}
-
-.card-image{
-  background-color: turquoise;
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img4{
-  background-image: url("/Imagens/termo.jpg")
-}
-
-.img5{
-  background-image: url("/Imagens/quinta.jpg")
-}
-
-.img6{
-  background-image: url("/Imagens/skybar.jpg")
-}
-
-.card h2{
-  padding: 10px;
-}
-.card h3{
-  padding: 0.5px;
-}
-
-.card p{
-  padding: 10px;
-}
-
-
-.button {
-  background-color: #1d4638;
-  transition-duration: 0.4s;
-  align: center;
-  
-}
-
-.card button:hover {
-  background-color: #1d4638; 
-  color: white;
-  align: center;
-}
-
-/*Nordeste*/
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background: white;
-  width: 270px;
-  height: 500px;
-  margin: 10px;
-}
-
-.card-image{
-  background-color: turquoise;
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img7{
-  background-image: url("/Imagens/casadocampo.jpg")
-}
-
-.img8{
-  background-image: url("/Imagens/perola.jpg")
-}
-
-.card h2{
-  padding: 10px;
-}
-
-.card p{
-  padding: 10px;
-}
-
-
-.button {
-  background-color: #4CAF50;
-  transition-duration: 0.4s;
-  align: center;
-  
-}
-
-.card button:hover {
-  background-color: #4CAF50; 
-  color: white;
-  align: center;
-}
-/*Vila da Povoação*/
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background: white;
-  width: 270px;
-  height: 500px;
-  margin: 10px;
-}
-
-.card-image{
-  background-color: turquoise;
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img9{
-  background-image: url("/Imagens/auri.jpg")
-}
-
-.img10{
-  background-image: url("/Imagens/palmeiras.jpg")
-}
-
-.img11{
-  background-image: url("/Imagens/encantos.jpg")
-}
-
-.card h2{
-  padding: 1px;
-}
-
-.card p{
-  padding: 10px;
-}
-
-
-.button {
-  background-color: #1d4638;
-  transition-duration: 0.4s;
-  align: center;
-  
-}
-
-.card button:hover {
-  background-color: #1d4638; 
-  color: white;
-  align: center;
-}
-/*Ribeira Grande*/
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background: white;
-  width: 270px;
-  height: 500px;
-  margin: 10px;
-}
-
-.card-image{
-  background-color: turquoise;
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img12{
-  background-image: url("/Imagens/hotelverde.jpg")
-}
-
-.img13{
-  background-image: url("/Imagens/atlaticos.jpg")
-}
-
-.img14{
-  background-image: url("/Imagens/quintapastor.jpg")
-}
-
-.card h2{
-  padding: 10px;
-}
-
-.card p{
-  padding: 10px;
-}
-
-
-.button {
-  background-color: #1d4638;
-  transition-duration: 0.4s;
-  align: center;
-  
-}
-
-.card button:hover {
-  background-color: #1d4638; 
-  color: white;
-  align: center;
-}
-/*Vila Franca do Campo*/
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card{
-  background: white;
-  width: 270px;
-  height: 500px;
-  margin: 10px;
-}
-
-.card-image{
-  background-color: turquoise;
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-.img15{
-  background-image: url("/Imagens/casa.jpg")
-}
-
-.img16{
-  background-image: url("/Imagens/vivenda.jpg")
-}
-
-.img17{
-  background-image: url("/Imagens/beija.jpg")
-}
-
-.card h2{
-  padding: 1px;
-}
-
-.card p{
-  padding: 10px;
-}
-
-
-.button {
-  background-color: #1d4638;
-  transition-duration: 0.4s;
-  align: center;
-  
-}
-
-.card button:hover {
-  background-color: #1d4638; 
-  color: white;
-  align: center;
-}
-
 
 
 /*rodape*/
