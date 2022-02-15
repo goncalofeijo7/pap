@@ -51,7 +51,7 @@ function insertCardInfo(data) {
                         <h2>${cardTitle}</h2>
                         <p>${cardDescription}</p>
                         <div class="d-flex justify-content-center">
-                            <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button>Reserve já!</button></a></div>
+                            <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button style="position: absolute; left: 90px; top: 450px;">Reserve já!</button></a></div>
                         </div>
                 </div>`
         }
