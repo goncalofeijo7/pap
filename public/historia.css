@@ -2,7 +2,19 @@ body {
     background-image: none !important;
     background-color: #fff !important;
     box-shadow:  0 0 400px rgba(73, 68, 68, 0.9) inset;
+    animation: transitionIn 0.55s;
 }
+@keyframes transitionIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .bg {
     background-color: white!important;

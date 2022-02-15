@@ -1,3 +1,11 @@
+.imagem{
+  background-image: url("/Imagens/parker-hilton-Rc_BfquhmRQ-unsplash (1).png");
+  background-position: center;
+  background-size: cover;
+  height:770px;
+}
+
+
 .my_bg-nav{
     background-color: #1d4638;
 }
@@ -36,18 +44,6 @@
   background-size: cover;
   border-radius: 15px 15px 0 0;
 }
-
-.img4 {
-    background-image: url("/Imagens/ISM6481.jpg")
-  }
-  
-  .img5 {
-    background-image: url("/Imagens/univ._acores.jpg")
-  }
-  
-  .img6 {
-    background-image: url("/Imagens/slideshow01.jpg")
-  }
 
 .card h2 {
     text-align: center;

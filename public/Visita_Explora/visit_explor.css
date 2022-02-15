@@ -48,56 +48,6 @@ body{
   border-radius: 15px 15px 0 0;
 }
 
-.img1 {
-  background-image: url("/Imagens/600600p383EDNmainimg-IMG_8878.jpg")
-}
-
-.img2 {
-  background-image: url("/Imagens/20190521-160539-largejpg.jpg")
-}
-
-.img3 {
-  background-image: url("/Imagens/7eaa0e06fcc0e014ef76e94832b47038.jpg")
-}
-
-/*Museus e Centros Culturais*/
-.img4 {
-  background-image: url("/Imagens/ISM6481.jpg")
-}
-
-.img5 {
-  background-image: url("/Imagens/univ._acores.jpg")
-}
-
-.img6 {
-  background-image: url("/Imagens/slideshow01.jpg")
-}
-
-/*Jardins e Parques*/
-.img7 {
-  background-image: url("/Imagens/photo0jpg.jpg")
-}
-
-.img8 {
-  background-image: url("/Imagens/antonio-borges-garden.jpg")
-}
-
-.img9 {
-  background-image: url("/Imagens/Terra Nostra 1   43.jpg")
-}
-
-/*Zonas Balneares*/
-.img10 {
-  background-image: url("/Imagens/Ribeira Quente_660x371.jpg")
-}
-
-.img11 {
-  background-image: url("/Imagens/zona_balnear_pocas_sul_mosteiros.jpg")
-}
-
-.img12 {
-  background-image: url("/Imagens/agua_dalto_beach.jpg")
-}
 
 .card h2 {
   text-align: center;
@@ -119,8 +69,6 @@ body{
   color: white;
   align: center;
 }
-
-
 /*rodape*/
 
 .footer-dark {

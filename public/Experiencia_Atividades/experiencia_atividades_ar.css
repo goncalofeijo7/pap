@@ -5,8 +5,8 @@ body{
   .imagem{
     background-image: url("/Imagens/rui-amaro-yLm9YUWnX7Y-unsplash.png");
     background-position: center;
-    background-size: cover;
-    height: 100%;
+    background-size:cover;
+    height: 770px;
   }
 
 .my_bg-nav {
@@ -23,7 +23,7 @@ body{
 }
 
 
-/*Ar*/
+/*Informação*/
 
 .container {
     display: flex;
@@ -46,12 +46,13 @@ body{
     border-radius: 15px 15px 0 0;
 }
 
-.img13 {
-    background-image: url("/Imagens/parapente_-_lagoa_do_fogo.jpg")
+.card h2{
+    text-align: center;
 }
 
 .card p {
     padding: 10px;
+    text-align: center;
 }
 
 .button {
@@ -74,7 +75,7 @@ body{
     padding: 15px;
     color: #f0f9ff;
     background-color: #1d4638;
-    position: fixed;
+    position:absolute;
     bottom: 0;
 }
 

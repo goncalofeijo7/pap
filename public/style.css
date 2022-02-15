@@ -21,7 +21,9 @@ body {
   height: 100%;
   box-shadow: 0 0 400px rgba(0, 0, 0, 0.9) inset;
   background-size: cover;
+  height: 100%;
 }
+
 
 .my_bg-nav {
   background-color: #1d4638;
@@ -45,7 +47,7 @@ body {
 
 .btn-saibamais {
   color: white;
-  background-color: #1d4638;
+  background-color: #1d4638; 
 }
 
 .btn-saibamais:hover {

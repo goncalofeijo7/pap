@@ -25,9 +25,6 @@ body{
 
 /*Informação*/
 
-
-/*Terra*/
-
 .container {
     display: flex;
     justify-content: center;
@@ -49,37 +46,15 @@ body{
     border-radius: 15px 15px 0 0;
 }
 
-.img1 {
-    background-image: url("/Imagens/Fajã-da-Caldeira-do-Santo-Cristo.jpg")
-}
 
-.img2 {
-    background-image: url("/Imagens/02_faial.jpg")
-}
-
-.img3 {
-    background-image: url("/Imagens/05_30_14_azores_046.jpg")
-}
-
-.img4 {
-    background-image: url("/Imagens/campo-de-golfe-furnas-sao-miguel-acores.jpg")
-}
-
-.img5 {
-    background-image: url("/Imagens/Rare-birds-360x360.jpg")
-}
-
-.img6 {
-    background-image: url("/Imagens/DSCF9792_Easy-Resize.com_-1024x768.jpg")
-}
-
-.card h2 {
+.card h2{
     text-align: center;
     padding: 10px;
 }
 
 .card p {
     padding: 10px;
+    text-align: center;
 }
 
 .button {
@@ -93,122 +68,6 @@ body{
     color: white;
     align: center;
 }
-
-/*Mar*/
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    width: 270px;
-    height: 500px;
-    margin: 10px;
-}
-
-.card-image {
-    background-color: turquoise;
-    height: 170px;
-    margin-bottom: 15px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.img7 {
-    background-image: url("/Imagens/N4.ACT1084D.jpg")
-}
-
-.img8 {
-    background-image: url("/Imagens/dive-in-azores-portugal.jpg")
-}
-
-.img9 {
-    background-image: url("/Imagens/surf-areal-santa-barbara-azores.jpg")
-}
-
-.img10 {
-    background-image: url("/Imagens/unnamed.jpg")
-}
-
-.img11 {
-    background-image: url("/Imagens/12990167LB-Barragem-Castelo-Bode-23-08-18-0084.jpg")
-}
-
-.img12 {
-    background-image: url("/Imagens/ATA_P9M20003.jpg")
-}
-
-.card h2 {
-    padding: 10px;
-}
-
-.card h3 {
-    padding: 0.5px;
-}
-
-.card p {
-    padding: 10px;
-}
-
-.button {
-    background-color: #1d4638;
-    transition-duration: 0.4s;
-    align: center;
-}
-
-.card button:hover {
-    background-color: #1d4638;
-    color: white;
-    align: center;
-}
-
-
-/*Ar*/
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: white;
-    width: 270px;
-    height: 500px;
-    margin: 10px;
-}
-
-.card-image {
-    background-color: turquoise;
-    height: 170px;
-    margin-bottom: 15px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.img13 {
-    background-image: url("/Imagens/parapente_-_lagoa_do_fogo.jpg")
-}
-
-.card p {
-    padding: 10px;
-}
-
-.button {
-    background-color: #4CAF50;
-    transition-duration: 0.4s;
-    align: center;
-}
-
-.card button:hover {
-    background-color: #4CAF50;
-    color: white;
-    align: center;
-}
-
 
 /*rodape*/
 

@@ -1,3 +1,11 @@
+.imagem{
+  background-image: url("/Imagens/parker-hilton-Rc_BfquhmRQ-unsplash (1).png");
+  background-position: center;
+  background-size: cover;
+  height: 770px;
+}
+
+
 .my_bg-nav{
     background-color: #1d4638;
 }
@@ -36,18 +44,6 @@
   background-size: cover;
   border-radius: 15px 15px 0 0;
 }
-
-.img10 {
-    background-image: url("/Imagens/Ribeira Quente_660x371.jpg")
-  }
-  
-  .img11 {
-    background-image: url("/Imagens/zona_balnear_pocas_sul_mosteiros.jpg")
-  }
-  
-  .img12 {
-    background-image: url("/Imagens/agua_dalto_beach.jpg")
-  }
 
 .card h2 {
     text-align: center;

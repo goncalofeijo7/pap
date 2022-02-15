@@ -1,3 +1,11 @@
+.imagem{
+  background-image: url("/Imagens/parker-hilton-Rc_BfquhmRQ-unsplash (1).png");
+  background-position: center;
+  background-size: cover;
+  height: 770px;
+}
+
+
 .my_bg-nav{
     background-color: #1d4638;
 }
@@ -35,18 +43,6 @@
   margin-bottom: 15px;
   background-size: cover;
   border-radius: 15px 15px 0 0;
-}
-
-.img1 {
-  background-image: url("/Imagens/600600p383EDNmainimg-IMG_8878.jpg")
-}
-
-.img2 {
-  background-image: url("/Imagens/20190521-160539-largejpg.jpg")
-}
-
-.img3 {
-  background-image: url("/Imagens/7eaa0e06fcc0e014ef76e94832b47038.jpg")
 }
 
 .card h2 {
