@@ -1,26 +1,12 @@
 const express = require('express')
 const path = require('path');
-const mysql2 = require('mysql2');
 const dotenv = require('dotenv');
 const app = express()
 
 dotenv.config({ path: './.env' });
 
-const db = mysql2.createConnection({
+const connection = require('./public/scripts/dbconnect.js');
 
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'dbPAP'
-})
-
-db.connect((error) => {
-    if (error) {
-        console.log(error)
-    } else {
-        console.log("Connected to DataBase")
-    }
-})
 
 app.use(express.static('./public'))
 
@@ -34,6 +20,17 @@ app.get('/navbar', (req, res) => {
 
 app.get('/footer', (req, res) => {
     res.sendFile(path.join(__dirname, './public/footer.html'))
+})
+
+app.get('/cInfo', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 1;;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
 })
 
 
