@@ -4,15 +4,13 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-
+body {
+    background-image: none !important;
+    box-shadow: 0 0 400px rgba(0, 0, 0, 0.9) inset;
+}
 
 .h3 {
     text-align: center;
-}
-
-body {
-
-    box-shadow: 0 0 400px rgba(0, 0, 0, 0.9) inset;
 }
 
 .my_bg-nav {
