@@ -17,12 +17,12 @@
     <div id="nbar"></div>
 
     <!--Informação-->
-    <h1 class="text-center mt-5">Passeios a cavalo</h1>
+    <h1 class="text-center mt-3">Passeios a cavalo</h1>
 
-    <div class="container mt-5">
+    <div class="container">
 
         <!--  image left  -->
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-6">
                 <img src="/Imagens/05_30_14_azores_046.jpg" alt="" class="w-100" />
             </div>
@@ -44,6 +44,39 @@
 
             </div>
         </div>
+                <!-- Wrapper container -->
+                <div class="container py-4">
+                    <h1>Feedback</h1>
+                    <!-- Bootstrap 5 starter form -->
+                    <form id="contactForm">
+        
+                        <!-- Name input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Título</label>
+                            <input class="form-control" id="name" type="text" placeholder="Título"
+                                data-sb-validations="required" />
+                        </div>
+        
+                        <!-- Message input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="message">Mensagem</label>
+                            <textarea class="form-control" id="message" type="text" placeholder="Mensagem" style="height: 10rem;"
+                                data-sb-validations="required"></textarea>
+                        </div>
+        
+                        <!-- Message input -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlFile1">Envie-nos uma imagem</label>
+                            <input type="file" class="form-control" aria-label="file example" required>
+                            <div class="invalid-feedback">Example invalid form file feedback</div>
+                          </div>
+        
+                        <!-- Form submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-lg" style="background-color:#1d4638; color:white;" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
     </div>
     <div id="foot"></div>
 </body>
