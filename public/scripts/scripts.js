@@ -46,8 +46,8 @@ function insertCardInfo(data) {
             let cardDescription = data[i].cardDescription
             cardInfo.innerHTML +=
                 `<div class="col-sm">
-                    <div class="card">
-                        <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover;">
+                    <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+                        <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover; ">
                         <h2>${cardTitle}</h2>
                         <p>${cardDescription}</p>
                         <div class="d-flex justify-content-center">

@@ -87,10 +87,10 @@
 /*rodape*/
 .footer-dark {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     color:#f0f9ff;
     background-color:#1d4638;
-    position:fixed;
+    position:flex;
     bottom: 0;
   }
   

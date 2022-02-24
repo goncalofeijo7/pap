@@ -5,6 +5,10 @@
   height: 770px;
 }
 
+.separador{
+    height: 50px;
+}
+
 
 .my_bg-nav {
     background-color: #1d4638;
@@ -69,7 +73,7 @@
     padding: 15px;
     color: #f0f9ff;
     background-color: #1d4638;
-    position: fixed;
+    position: flex;
     bottom: 0;
 }
 
