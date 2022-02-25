@@ -318,13 +318,8 @@ app.get('/cInfo', function(req, res) {
 })
 
 
-<<<<<<< HEAD
-const port = 3001
-
-=======
-
 const port = 3000
->>>>>>> 49fe6e586e407ee910c13e7ab14b5c250b61ef8d
+
 
 app.listen(port, () => {
     console.log('Listenning...')
