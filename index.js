@@ -216,7 +216,7 @@ app.get('/Surf', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Experiencia_Atividades/surf.html'))
 })
 
-app.get('/Trilhos', (req, res) =>{
+app.get('/Experiencias_Atividades/Trilhos', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Experiencia_Atividades/trilhos.html'))
 })
 
@@ -284,15 +284,15 @@ app.get('/PocasSulDosMosteiros', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Visita_Explora/pocos_mosteiros.html'))
 })
 
-app.get('/PraiaDeAguaDalto', (req, res) =>{
+app.get('/Visita_Explora/PraiaDeAguaDalto', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Visita_Explora/praia_agua_dalto.html'))
 })
 
-app.get('/PraiaDoFogo', (req, res) =>{
+app.get('/Visita_Explora/PraiaDoFogo', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Visita_Explora/praia_fogo.html'))
 })
 
-app.get('/TeatroMicaelense', (req, res) =>{
+app.get('/Visita_Explora/TeatroMicaelense', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Visita_Explora/teatro.html'))
 })
 
@@ -306,8 +306,41 @@ app.get('/ZonasBalneares', (req, res) =>{
 
 /*Rota da informação da base de dados para os cards*/
 
-app.get('/cInfo', function(req, res) {
+app.get('/cInfoPontaDelgada', function(req, res) {
     connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoLagoa', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoNordeste', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 4;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoPovoacao', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 5;', function(err, result) {
         if (err) {
             console.log('Erro: ' + err)
             throw err;

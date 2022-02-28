@@ -27,14 +27,43 @@ function getFooter() {
         })
 }
 
-function insertCards() {
-    fetch('http://localhost:3000/cInfo')
+function insertCardsPontaDelgada() {
+    fetch('http://localhost:3000/cInfoPontaDelgada')
         .then(res => res.json())
         .then(data => insertCardInfo(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
 }
+
+function insertCardsLagoa() {
+    fetch('http://localhost:3000/cInfoLagoa')
+        .then(res => res.json())
+        .then(data => insertCardInfo(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
+function insertCardsNordeste() {
+    fetch('http://localhost:3000/cInfoNordeste')
+        .then(res => res.json())
+        .then(data => insertCardInfo(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
+function insertCardsPovoacao() {
+    fetch('http://localhost:3000/cInfoPovoacao')
+        .then(res => res.json())
+        .then(data => insertCardInfo(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
+
 
 function insertCardInfo(data) {
     const cardInfo = document.getElementById('cardInfos')
@@ -51,7 +80,6 @@ function insertCardInfo(data) {
                         <h2>${cardTitle}</h2>
                         <p>${cardDescription}</p>
                         <div class="d-flex justify-content-center">
-                            <a target="_blank" href="/Alojamento/Hoteis/Ponta Delgada/hotelvip.html"><button style="position: absolute; left: 90px; top: 450px;">Reserve já!</button></a></div>
                         </div>
                 </div>`
         }
