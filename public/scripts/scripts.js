@@ -63,6 +63,24 @@ function insertCardsPovoacao() {
         })
 }
 
+function insertCardsRibeiraGrande() {
+    fetch('http://localhost:3000/cInfoRibeiraGrande')
+        .then(res => res.json())
+        .then(data => insertCardInfo(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
+function insertCardsVFdoCampo() {
+    fetch('http://localhost:3000/cInfoVFdoCampo')
+        .then(res => res.json())
+        .then(data => insertCardInfo(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
 
 
 function insertCardInfo(data) {
@@ -87,3 +105,4 @@ function insertCardInfo(data) {
 
     }
 }
+
