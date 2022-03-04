@@ -96,7 +96,7 @@ function insertCardInfo(data) {
                     <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
                         <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover; ">
                         <h2>${cardTitle}</h2>
-                        <p>${cardDescription}</p>
+                        <p style="text-align: center;">${cardDescription}</p>
                         <div class="d-flex justify-content-center">
                         </div>
                 </div>`
@@ -106,3 +106,27 @@ function insertCardInfo(data) {
     }
 }
 
+function insertNavbarInfoPontaDelgada() {
+    fetch('http://localhost:3000/navInfoPontaDelgada')
+        .then(resp => resp.json())
+        .then(data => insertNavbarInfos(data))
+        .catch(function(err) {
+            alert('Ocorreu um problema...' + err)
+        })
+}
+
+function insertNavbarInfos(data){
+    console.log(data)
+    const navInfo = document.getElementById('navInfos')
+    try{
+        console.log('a')
+        for(let a = 0; a < data.length; a++){
+            let aR = data[a].accomodationRegion
+            navInfo.innerHTML +=
+                            `
+                            <li><a class="dropdown-item" href="/Alojamento/ponta_delgada.html">${aR}</a></li>`
+        }
+    } catch (e) {
+                
+    }
+}
