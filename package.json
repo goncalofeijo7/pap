@@ -16,7 +16,10 @@
   },
   "homepage": "https://github.com/goncalofeijo7/pap#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
     "pkg": "^5.4.1"

@@ -2,10 +2,28 @@ const express = require('express')
 const path = require('path');
 const dotenv = require('dotenv');
 const app = express()
+const authController = require('./controller/auth.controller.js')
+const cors = require('cors');
+app.use(cors());
+
+app.options('*', cors());
+app.use((req, res, callback) => {
+res.header('Access-Control-Allow-Origin', '*');
+res.header('Access-Control-Allow-Methods',
+    'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+res.header('Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization, Language, Location');
+res.header('Access-Control-Expose-Headers', 'Authorization, Language, Location');
+    return callback();
+})
 
 dotenv.config({ path: './.env' });
 
-const connection = require('./public/scripts/dbconnect.js');
+//interpreteção do formato json
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ extended: false }))
+
+const connection = require('./config/dbconnect.js');
 
 
 app.use(express.static('./public'))
@@ -68,8 +86,17 @@ app.get('/Conta/Register', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Conta/cadastro.html'))
 })
 
+app.use('/login',authController.checkAuth,require('./routes/user.route.js'))
+
 app.get('/Conta/Login', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Conta/login.html'))
+})
+
+app.post('/page',authController.checkAuth,(req,res)=>{
+    if(req.body.level==="admin")
+         res.redirect('/adminpage')
+    else
+         res.redirect('/main')
 })
 
 /*Rota da Página da História de São Miguel*/
