@@ -372,6 +372,17 @@ app.get('/cInfoVFdoCampo', function(req, res) {
     })
 })
 
+app.get('/navInfoPontaDelgada', function(req, resp) {
+    connection.query('SELECT * FROM accomodation;', function(err, result){
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            resp.json(result)
+        }  
+    })
+})
+
 const port = 3000
 
 
