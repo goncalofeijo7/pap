@@ -105,7 +105,7 @@ function insertCardInfo(data) {
 
     }
 }
-
+/*
 function insertNavbarInfoPontaDelgada() {
     fetch('http://localhost:3000/navInfoPontaDelgada')
         .then(resp => resp.json())
@@ -130,7 +130,7 @@ function insertNavbarInfos(data){
                 
     }
 }
-
+*/
 function logout() {
     localStorage.removeItem("token", "");
     localStorage.removeItem("level", "");
@@ -157,7 +157,7 @@ function logout() {
       body: JSON.stringify(loginObj),
     };
     fetch("http://localhost:3000/Conta/login", options)
-      .then((res) => {
+        .then((res) => {
         if(res.status===406){
           alert(res.json().msg)
           return
