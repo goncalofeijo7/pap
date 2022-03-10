@@ -86,17 +86,13 @@ app.get('/Conta/Register', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Conta/cadastro.html'))
 })
 
-app.use('/login',authController.checkAuth,require('./routes/user.route.js'))
-
-app.get('/Conta/Login', (req, res) =>{
-    res.sendFile(path.join(__dirname, './public/Conta/login.html'))
-})
+app.use('/login', require('./routes/user.route.js'))
 
 app.post('/page',authController.checkAuth,(req,res)=>{
     if(req.body.level==="admin")
-         res.redirect('/adminpage')
+         res.redirect('/')
     else
-         res.redirect('/main')
+         res.redirect('/')
 })
 
 /*Rota da Página da História de São Miguel*/
@@ -399,6 +395,18 @@ app.get('/cInfoVFdoCampo', function(req, res) {
     })
 })
 
+app.get('/cInfoAtividadesTerra', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+/*
 app.get('/navInfoPontaDelgada', function(req, resp) {
     connection.query('SELECT * FROM accomodation;', function(err, result){
         if (err) {
@@ -409,6 +417,7 @@ app.get('/navInfoPontaDelgada', function(req, resp) {
         }  
     })
 })
+*/
 
 const port = 3000
 

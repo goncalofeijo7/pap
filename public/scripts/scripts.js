@@ -72,7 +72,7 @@ function insertCardsRibeiraGrande() {
         })
 }
 
-function insertCardsVFdoCampo() {
+function insertCardsVFdoCampo(){
     fetch('http://localhost:3000/cInfoVFdoCampo')
         .then(res => res.json())
         .then(data => insertCardInfo(data))
@@ -81,6 +81,14 @@ function insertCardsVFdoCampo() {
         })
 }
 
+function insertCardsAtividadesTerra(){
+    fetch('http://localhost:3000/cInfoAtividadesTerra')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
 
 
 function insertCardInfo(data) {
@@ -105,7 +113,7 @@ function insertCardInfo(data) {
 
     }
 }
-
+/*
 function insertNavbarInfoPontaDelgada() {
     fetch('http://localhost:3000/navInfoPontaDelgada')
         .then(resp => resp.json())
@@ -130,7 +138,7 @@ function insertNavbarInfos(data){
                 
     }
 }
-
+*/
 function logout() {
     localStorage.removeItem("token", "");
     localStorage.removeItem("level", "");
@@ -156,8 +164,8 @@ function logout() {
       },
       body: JSON.stringify(loginObj),
     };
-    fetch("http://localhost:3000/Conta/login", options)
-      .then((res) => {
+    fetch("http://localhost:3000/login", options)
+      .then((res) => {  
         if(res.status===406){
           alert(res.json().msg)
           return

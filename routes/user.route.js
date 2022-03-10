@@ -6,7 +6,7 @@ const authController = require("../controller/auth.controller.js");
 const path = require("path");
 
 router.post("/", authController.login,(req,res)=>{
-  res.redirect('/adminpage')
+  res.redirect('/')
 })
 
 router.get("/login", (req, res) => {
@@ -22,14 +22,14 @@ router.post("/new", (req, res) => {
   let today = new Date().toISOString().slice(0, 10)
   try {
     connection.query(
-      "SELECT * FROM user WHERE usercname = ?",
+      "SELECT * FROM users WHERE username = ?",
       [req.body.username],
       (error, result) => {
         if (error) throw error;
         if (result>0) res.json({msg:'Utilizador existente'})
         try{
           connection.query(
-            'INSERT INTO user (username,password,level,registration_data) VALUES (?,?,?,?)',
+            'INSERT INTO users (username,password,level,registration_data) VALUES (?,?,?,?)',
             [username,encPass,level,today],
             (error,result)=>{
               if(error) throw error
@@ -38,7 +38,7 @@ router.post("/new", (req, res) => {
               let public_key=Math.random().toString(36).substring(2) + result.insertId
               try{
                 connection.query(
-                  'UPDATE user SET public_key = ?, private_key = ? WHERE iduser = ?',
+                  'UPDATE users SET public_key = ?, private_key = ? WHERE userID = ?',
                   [public_key,private_key,result.insertId],
                   (error,result)=>{
                     if (error) throw error
