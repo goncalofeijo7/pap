@@ -1,7 +1,6 @@
 body {
     background-image: none !important;
     background-color: #fff !important;
-    box-shadow: 0 0 300px rgba(0, 0, 0, 0.9) inset;
     animation: transitionIn 0.55s;
     height: 120%;
 }
@@ -37,7 +36,6 @@ body {
   color: #f0f9ff;
   background-color: #1d4638;
   position: flex;
-  bottom: 0;
 }
 
 .footer-dark h3 {

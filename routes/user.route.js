@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const connection = require("../config/dbconnect.js");
+const connection = require("../config/dbconnect");
 const bcryptjs = require("bcryptjs");
-const authController = require("../controller/auth.controller.js");
+const authController = require("../controller/auth.controller");
 const path = require("path");
 
 router.post("/", authController.login,(req,res)=>{
@@ -22,14 +22,14 @@ router.post("/new", (req, res) => {
   let today = new Date().toISOString().slice(0, 10)
   try {
     connection.query(
-      "SELECT * FROM users WHERE username = ?",
+      "SELECT * FROM user WHERE username = ?",
       [req.body.username],
       (error, result) => {
         if (error) throw error;
         if (result>0) res.json({msg:'Utilizador existente'})
         try{
           connection.query(
-            'INSERT INTO users (username,password,level,registration_data) VALUES (?,?,?,?)',
+            'INSERT INTO users (username,password,level) VALUES (?,?,?)',
             [username,encPass,level,today],
             (error,result)=>{
               if(error) throw error

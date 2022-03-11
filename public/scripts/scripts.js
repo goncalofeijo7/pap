@@ -15,6 +15,18 @@ function getNavbar() {
         })
 }
 
+function getNavbarLogout() {
+    const nbar = document.getElementById('nbarlo')
+    fetch('http://localhost:3000/navbarLogout')
+        .then(res => res.text())
+        .then((html) => {
+            nbar.innerHTML += html
+        })
+        .catch(function(err) {
+            alert('Ocorreu um problema...')
+        })
+}
+
 function getFooter() {
     const foot = document.getElementById('foot')
     fetch('http://localhost:3000/footer')
@@ -180,6 +192,47 @@ function logout() {
       .catch((error) => console.log(error));
   }
 
+  function validaRegisto(){
+    if(document.getElementById("username").value != "" && document.getElementById("username").value != null &&
+       document.getElementById("password").value != "" && document.getElementById("password").value != null)
+       return true;
+    else
+        alert("introduza os dados de registo corretamente");
+        return false;
+}
+
+async function register(){
+
+    if(validaRegisto()){
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+                level:"regular"
+            })
+        }
+    
+        await fetch('http://localhost:3000/register', options)
+        .then((res) => {
+            if(res.status == 200)
+            location.reload();
+            else{
+               
+                document.getElementById("username").value = ""
+                document.getElementById("passowrd").value = ""
+                document.getElementById("msgErro").style.display = "block" 
+            }
+          })
+          .catch((error) => console.log(error));
+          
+    }      
+}
+
+  
   function getPage(data){
     localStorage.setItem("level", data.level); 
     const obj = {

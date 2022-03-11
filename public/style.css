@@ -13,7 +13,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 300px rgba(0, 0, 0, 0.9) inset;
   background-size: cover;
 }
 
@@ -21,7 +20,6 @@ body {
 .my_bg-nav {
   background-color: #1d4638;
 }
-
 .container-fluid {
   margin-left: 25px;
   margin-right: 15px;
@@ -55,7 +53,7 @@ body {
   padding: 15px;
   color: #f0f9ff;
   background-color: #1d4638;
-  position: fixed;
+  position: flex;
   bottom: 0;
 }
 

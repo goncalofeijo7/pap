@@ -2,9 +2,10 @@ const express = require('express')
 const path = require('path');
 const dotenv = require('dotenv');
 const app = express()
-const authController = require('./controller/auth.controller.js')
+const authController = require('./controller/auth.controller')
 const cors = require('cors');
 app.use(cors());
+const connection = require('./config/dbconnect.js');
 
 app.options('*', cors());
 app.use((req, res, callback) => {
@@ -23,10 +24,10 @@ dotenv.config({ path: './.env' });
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json({ extended: false }))
 
-const connection = require('./config/dbconnect.js');
-
+app.use('/login', require('./routes/user.route.js'))
 
 app.use(express.static('./public'))
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html'))
@@ -34,6 +35,10 @@ app.get('/', (req, res) => {
 
 app.get('/navbar', (req, res) => {
     res.sendFile(path.join(__dirname, './public/navbar.html'))
+})
+
+app.get('/navbarlogout', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/navbar_logout.html'))
 })
 
 app.get('/footer', (req, res) => {
@@ -86,10 +91,9 @@ app.get('/Conta/Register', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Conta/cadastro.html'))
 })
 
-app.use('/login', require('./routes/user.route.js'))
 
 app.post('/page',authController.checkAuth,(req,res)=>{
-    if(req.body.level==="admin")
+    if(req.body.level==="admin")    
          res.redirect('/')
     else
          res.redirect('/')
