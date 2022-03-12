@@ -161,35 +161,42 @@ function logout() {
       })
       .catch((error) => console.log(error));
   }
-  
+
   function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    let loginObj = {
-      username: username,
-      password: password,
-    };
-    let options = {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(loginObj),
-    };
-    fetch("http://localhost:3000/login", options)
-      .then((res) => {  
-        if(res.status===406){
-          alert(res.json().msg)
-          return
-        }       
-        let token = res.headers.get("Authorization");
-        localStorage.setItem("token", token);
-        return res.json();
-      })
-      .then((data) => {
-        getPage(data)
-      })
-      .catch((error) => console.log(error));
+
+    if(document.getElementById("username").value != "" && document.getElementById("username").value != null 
+        && document.getElementById("password").value != "" && document.getElementById("password").value != null){
+            let loginObj = {
+                username: username,
+                password: password,
+              };
+              let options = {
+                method: "POST",
+                headers: {
+                  "Content-type": "application/json",
+                },
+                body: JSON.stringify(loginObj),
+              };
+              fetch("http://localhost:3000/login", options)
+                .then((res) => {  
+                  if(res.status===406){
+                    alert(res.json().msg)
+                    return
+                  }       
+                  let token = res.headers.get("Authorization");
+                  localStorage.setItem("token", token);
+                  return res.json();
+                })
+                .then((data) => {
+                  getPage(data)
+                })
+                .catch((error) => console.log(error));
+    }else {
+        alert("Preencha os campos corretamente!");
+        console.log('teste');
+    }
   }
 
   function validaRegisto(){
