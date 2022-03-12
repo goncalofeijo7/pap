@@ -53,7 +53,7 @@ body {
   padding: 15px;
   color: #f0f9ff;
   background-color: #1d4638;
-  position: flex;
+  position: fixed ;
   bottom: 0;
 }
 
