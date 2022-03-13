@@ -16,7 +16,7 @@
 
 </head>
 
-<body onload="initForm()">
+<body onload="initForm(), insertCardsZonasBalneares()">
     <div id="nbar"></div>
 
     <div class="imagem">
@@ -24,34 +24,10 @@
     <!--Jardins e Parques-->
     <h1 style="text-align:center">Zonas Balneares</h1>
     <section class="container">
-        <div class="card">
-            <img class="card-img-top"
-            src="/Imagens/Ribeira Quente_660x371.jpg" alt="Card
-            image" style="width: auto; height: 180px; object-fit:
-            cover;">
-            <h2>Praia do Fogo</h2>
-            <p>A Praia do Fogo é formada por um areal junto a uma baía onde existem várias nascentes hidrotermais submarinas.</p>
-                <a href="/Visita_Explora/praia_fogo.html"><button style="position: absolute; left: 90px; top: 450px;">Saiba mais!</button></a>
-        </div>
-        <div class="card">
-            <img class="card-img-top"
-        src="/Imagens/zona_balnear_pocas_sul_mosteiros.jpg" alt="Card
-        image" style="width: auto; height: 180px; object-fit:
-        cover;">
-            <h2>Poças Sul Mosteiros</h2>
-            <p>Delimitada por estruturas rochosas que formam piscinas naturais, esta zona balnear situa-se na freguesia dos Mosteiros, na costa norte da Ilha de S. Miguel e constitui o limite norte da freguesia.</p>
-                <a href="/Visita_Explora/pocos_mosteiros.html"><button style="position: absolute; left: 90px; top: 450px;">Saiba mais!</button></a>
-        </div>
-        <div class="card">
-            <img class="card-img-top"
-            src="/Imagens/agua_dalto_beach.jpg" alt="Card
-            image" style="width: auto; height: 180px; object-fit:
-            cover;">
-            <h2>Praia de Água d'Alto</h2>
-            <p>Situada numa agradável baía, a praia de Água d'alto é considerada uma das melhores praias da ilha de São Miguel.
-            </p>
-                <a href="/Visita_Explora/praia_agua_dalto.html"><button style="position: absolute; left: 90px; top: 450px;">Saiba mais!</button></a>
-        </div>
+        <div class="row" id="cardInfos"></div>
+            <a href="/Visita_Explora/praia_fogo.html"><button style="position: absolute; left: 450px; top: 590px;">Reserve já!</button></a>
+            <a href="/Visita_Explora/pocos_mosteiros.html"><button style="position: absolute; left: 800px; top: 590px;">Reserve já!</button></a>
+            <a href="/Visita_Explora/praia_agua_dalto.html"><button style="position: absolute; left: 1200px; top: 590px;">Reserve já!</button></a>          
     </section>
     
     </div>

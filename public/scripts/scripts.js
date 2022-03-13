@@ -1,6 +1,47 @@
 function initForm() {
-    getNavbar();
+    renderNavbars();
     getFooter();
+}
+
+function renderNavbars(){
+    if(localStorage.getItem("token")){
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                'authorization': localStorage.getItem("token")
+            },
+            body: JSON.stringify()
+        }
+
+        fetch('http://localhost:3000/open/getAuth', options)
+        .then((res) => {
+            if(res.status===200){
+                return res.json()
+            }
+            else{
+                localStorage.removeItem("token");
+                getNavbar();
+                return null
+            }
+        })
+        .then((res)=>{
+            if(res){
+            console.log(res);
+            switch (res.level) {
+                case 'regular':
+                    getNavbarLogout();
+                    break;
+                case 'admin':
+                    getNavbarLogout();
+                    break;
+            }
+        }else return;
+        })
+        .catch((error) => console.log(error));
+    }else{
+        getNavbar();
+    }
 }
 
 function getNavbar() {
@@ -103,6 +144,61 @@ function insertCardsAtividadesTerra(){
 }
 
 
+function insertCardsAtividadesMar(){
+    fetch('http://localhost:3000/cInfoAtividadesMar')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+function insertCardsAtividadesAr(){
+    fetch('http://localhost:3000/cInfoAtividadesAr')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+function insertCardsCentrosdeInterpretacao(){
+    fetch('http://localhost:3000/cInfoCentrosInterpretacao')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+function insertCardsMuseusCentros(){
+    fetch('http://localhost:3000/cInfoMuseusCentros')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+function insertCardsJardinsParques(){
+    fetch('http://localhost:3000/cInfoJardinsParques')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+function insertCardsZonasBalneares(){
+    fetch('http://localhost:3000/cInfoZonasBalneares')
+    .then(res => res.json())
+    .then(data => insertCardInfo(data))
+    .catch(function(err){
+        alert('Ocurreu um problema...' + err)
+    })
+}
+
+
 function insertCardInfo(data) {
     const cardInfo = document.getElementById('cardInfos')
     cardInfo.innerHTML = ''
@@ -151,16 +247,10 @@ function insertNavbarInfos(data){
     }
 }
 */
-function logout() {
-    localStorage.removeItem("token", "");
-    localStorage.removeItem("level", "");
-    fetch("http://localhost:3000")
-      .then((res) => {
-        console.log(res);
-        window.location.replace(res.url);
-      })
-      .catch((error) => console.log(error));
-  }
+function logout(){
+    localStorage.removeItem("token");
+    location.replace("http://localhost:3000/");
+}
 
   function login() {
     const username = document.getElementById("username").value;
@@ -201,10 +291,11 @@ function logout() {
 
   function validaRegisto(){
     if(document.getElementById("username").value != "" && document.getElementById("username").value != null &&
+       document.getElementById("email").value != "" && document.getElementById("email").value != null &&
        document.getElementById("password").value != "" && document.getElementById("password").value != null)
        return true;
     else
-        alert("introduza os dados de registo corretamente");
+        alert("Preencha os campos de registo corretamente!");
         return false;
 }
 
@@ -218,6 +309,7 @@ async function register(){
             },
             body: JSON.stringify({
                 username: document.getElementById("username").value,
+                email: document.getElementById("email").value,
                 password: document.getElementById("password").value,
                 level:"regular"
             })
@@ -230,16 +322,16 @@ async function register(){
             else{
                
                 document.getElementById("username").value = ""
-                document.getElementById("passowrd").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("password").value = ""
                 document.getElementById("msgErro").style.display = "block" 
             }
           })
           .catch((error) => console.log(error));
           
     }      
-}
+} 
 
-  
   function getPage(data){
     localStorage.setItem("level", data.level); 
     const obj = {

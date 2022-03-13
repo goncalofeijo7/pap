@@ -5,6 +5,7 @@ const app = express()
 const authController = require('./controller/auth.controller')
 const cors = require('cors');
 app.use(cors());
+const router = express.Router();
 const connection = require('./config/dbconnect.js');
 
 app.options('*', cors());
@@ -26,8 +27,22 @@ app.use(express.json({ extended: false }))
 
 app.use('/login', require('./routes/user.route.js'))
 
+router.use("/open", require("./routes/open"));
+
 app.use(express.static('./public'))
 
+app.get('/Conta/Register', (req, res) =>{
+    res.sendFile(path.join(__dirname, './public/Conta/cadastro.html'))
+})
+
+app.post('/page',authController.checkAuth,(req,res)=>{
+    if(req.body.level==="admin")    
+         res.redirect('/')
+    else
+         res.redirect('/historia.html')
+})
+
+/*----------------------------------------------------------------------------------------*/
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html'))
@@ -83,20 +98,6 @@ app.get('/Alojamento/alojamentosVilaFranca', (req, res) =>{
 
 app.get('/Alojamento/alojamentosPovoacao', (req, res) =>{
     res.sendFile(path.join(__dirname, './public/Alojamento/vila_povoacao.html'))
-})
-
-/*Rotas das Páginas de Login e Register*/
-
-app.get('/Conta/Register', (req, res) =>{
-    res.sendFile(path.join(__dirname, './public/Conta/cadastro.html'))
-})
-
-
-app.post('/page',authController.checkAuth,(req,res)=>{
-    if(req.body.level==="admin")    
-         res.redirect('/')
-    else
-         res.redirect('/')
 })
 
 /*Rota da Página da História de São Miguel*/
@@ -409,6 +410,73 @@ app.get('/cInfoAtividadesTerra', function(req, res) {
         }
     })
 })
+
+app.get('/cInfoAtividadesMar', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 2;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoAtividadesAr', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoCentrosInterpretacao', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoMuseusCentros', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 2;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoJardinsParques', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+app.get('/cInfoZonasBalneares', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 4;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
 
 /*
 app.get('/navInfoPontaDelgada', function(req, resp) {
