@@ -1,3 +1,7 @@
+*{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 .imagem{
   background-image: url("/Imagens/parker-hilton-Rc_BfquhmRQ-unsplash (1).png");
   background-position: center;

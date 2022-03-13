@@ -1,20 +1,11 @@
+*{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
     background-image: none !important;
     background-color: #fff !important;
-    animation: transitionIn 0.55s;
-    height: 120%;
 }
-@keyframes transitionIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
 .bg {
     background-color: white!important;
@@ -22,10 +13,11 @@ body {
 
 .history {
     color: black;
-    text-align: center;
+    text-align: justify;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 /*rodape*/
@@ -36,6 +28,7 @@ body {
   color: #f0f9ff;
   background-color: #1d4638;
   position: flex;
+  bottom: 0;
 }
 
 .footer-dark h3 {

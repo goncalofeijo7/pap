@@ -1,3 +1,7 @@
+*{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 .imagem{
   background-image: url("/Imagens/kevin-et-laurianne-langlais-9XchRGDjhhQ-unsplash.png");
   background-position: center;
