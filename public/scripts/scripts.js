@@ -83,7 +83,7 @@ function getFooter() {
 function insertCardsPontaDelgada() {
     fetch('http://localhost:3000/cInfoPontaDelgada')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoResto(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -92,7 +92,7 @@ function insertCardsPontaDelgada() {
 function insertCardsLagoa() {
     fetch('http://localhost:3000/cInfoLagoa')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoResto(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -101,7 +101,7 @@ function insertCardsLagoa() {
 function insertCardsNordeste() {
     fetch('http://localhost:3000/cInfoNordeste')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoNordeste(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -110,7 +110,7 @@ function insertCardsNordeste() {
 function insertCardsPovoacao() {
     fetch('http://localhost:3000/cInfoPovoacao')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoResto(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -119,7 +119,7 @@ function insertCardsPovoacao() {
 function insertCardsRibeiraGrande() {
     fetch('http://localhost:3000/cInfoRibeiraGrande')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoResto(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -128,7 +128,7 @@ function insertCardsRibeiraGrande() {
 function insertCardsVFdoCampo(){
     fetch('http://localhost:3000/cInfoVFdoCampo')
         .then(res => res.json())
-        .then(data => insertCardInfo(data))
+        .then(data => insertCardInfoResto(data))
         .catch(function(err) {
             alert('Ocorreu um problema...' + err)
         })
@@ -137,7 +137,7 @@ function insertCardsVFdoCampo(){
 function insertCardsAtividadesTerra(){
     fetch('http://localhost:3000/cInfoAtividadesTerra')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -147,7 +147,7 @@ function insertCardsAtividadesTerra(){
 function insertCardsAtividadesMar(){
     fetch('http://localhost:3000/cInfoAtividadesMar')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -156,7 +156,7 @@ function insertCardsAtividadesMar(){
 function insertCardsAtividadesAr(){
     fetch('http://localhost:3000/cInfoAtividadesAr')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -165,7 +165,7 @@ function insertCardsAtividadesAr(){
 function insertCardsCentrosdeInterpretacao(){
     fetch('http://localhost:3000/cInfoCentrosInterpretacao')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoResto(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -174,7 +174,7 @@ function insertCardsCentrosdeInterpretacao(){
 function insertCardsMuseusCentros(){
     fetch('http://localhost:3000/cInfoMuseusCentros')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoResto(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -183,7 +183,7 @@ function insertCardsMuseusCentros(){
 function insertCardsJardinsParques(){
     fetch('http://localhost:3000/cInfoJardinsParques')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoResto(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
@@ -192,15 +192,14 @@ function insertCardsJardinsParques(){
 function insertCardsZonasBalneares(){
     fetch('http://localhost:3000/cInfoZonasBalneares')
     .then(res => res.json())
-    .then(data => insertCardInfo(data))
+    .then(data => insertCardInfoResto(data))
     .catch(function(err){
         alert('Ocurreu um problema...' + err)
     })
 }
 
-
-function insertCardInfo(data) {
-    const cardInfo = document.getElementById('cardInfos')
+function insertCardInfoNordeste(data) {
+    const cardInfo = document.getElementById('cardInfosNordeste')
     cardInfo.innerHTML = ''
     try {
         for (let i = 0; i < data.length; i++) {
@@ -208,7 +207,53 @@ function insertCardInfo(data) {
             let cardTitle = data[i].cardTitle
             let cardDescription = data[i].cardDescription
             cardInfo.innerHTML +=
-                `<div class="col-sm">
+                `<div class="col-md"> 
+                    <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+                        <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover; ">
+                        <h2>${cardTitle}</h2>
+                        <p style="text-align: center;">${cardDescription}</p>
+                        <div class="d-flex justify-content-center">
+                        </div>
+                </div>`
+        }
+    } catch (e) {
+
+    }
+}
+
+function insertCardInfoResto(data) {
+    const cardInfo = document.getElementById('cardInfosResto')
+    cardInfo.innerHTML = ''
+    try {
+        for (let i = 0; i < data.length; i++) {
+            let cardImage = data[i].cardImage
+            let cardTitle = data[i].cardTitle
+            let cardDescription = data[i].cardDescription
+            cardInfo.innerHTML +=
+                `<div class="col-md-4"> 
+                    <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
+                        <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover; ">
+                        <h2>${cardTitle}</h2>
+                        <p style="text-align: center;">${cardDescription}</p>
+                        <div class="d-flex justify-content-center">
+                        </div>
+                </div>`
+        }
+    } catch (e) {
+
+    }
+}
+
+function insertCardInfoAtividades(data) {
+    const cardInfo = document.getElementById('cardInfosAtividades')
+    cardInfo.innerHTML = ''
+    try {
+        for (let i = 0; i < data.length; i++) {
+            let cardImage = data[i].cardImage
+            let cardTitle = data[i].cardTitle
+            let cardDescription = data[i].cardDescription
+            cardInfo.innerHTML +=
+                `<div class="col-md-3">
                     <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
                         <img class="card-img-top" src="${cardImage}" style="width:auto; height: 180px; object-fit: cover; ">
                         <h2>${cardTitle}</h2>
