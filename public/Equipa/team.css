@@ -1,4 +1,8 @@
- .my_bg-nav{
+*{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.my_bg-nav{
     background-color: #1d4638;
 }
 
