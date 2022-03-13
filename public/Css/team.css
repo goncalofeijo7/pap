@@ -2,8 +2,12 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.body{
+  background-color: white !important;
+}
+
 .my_bg-nav{
-    background-color: #1d4638;
+    background-color: #1d4638; 
 }
 
 .container-fluid2{
